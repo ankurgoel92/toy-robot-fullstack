@@ -30,8 +30,10 @@ REPORT|Will announce the X,Y and F of the robot.
 	Output: ROBOT MISSING
 
 ## App Details
-Heroku Endpoint | https://my-toy-robot.herokuapp.com/
-Swagger UI |  https://my-toy-robot.herokuapp.com/swagger-ui.html
 
-Its a spring boot rest application built using **Controller - Service - Repository** architecture.
+> Heroku Endpoint | https://my-toy-robot.herokuapp.com/
+
+> Swagger UI |  https://my-toy-robot.herokuapp.com/swagger-ui.html
+
+> It's a spring boot rest application built using **Controller - Service - Repository** architecture.
 Example requests are attached as postman json collections.
