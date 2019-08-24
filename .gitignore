@@ -190,4 +190,21 @@ buildNumber.properties
 
 *.gz
 
-# End of https://www.gitignore.io/api/java,eclipse,intellij,maven
+# compiled output
+dist
+tmp
+out-tsc
+# Only exists if Bazel was run
+bazel-out
+
+# dependencies
+node_modules
+node
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDE - VSCode
+.vscode/*
+.history/*
