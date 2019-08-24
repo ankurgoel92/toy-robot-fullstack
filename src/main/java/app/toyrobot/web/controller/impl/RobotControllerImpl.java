@@ -25,22 +25,26 @@ public class RobotControllerImpl implements RobotController {
     @Autowired
     private RobotService robotService;
 
+    @Override
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Robot place(@RequestBody InputCommand command) {
         return robotService.placeRobot(command);
     }
-
+    
+    @Override
     @PutMapping(value = "/{id}")
     public Robot moveOrRotate(@PathVariable Long id, @RequestBody InputCommand command) {
         return robotService.moveOrRotateRobot(id, command);
     }
 
+    @Override
     @GetMapping(value = "/{id}")
     public Report report(@PathVariable Long id) {
         return robotService.reportRobot(id);
     }
 
+    @Override
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") Long id) {

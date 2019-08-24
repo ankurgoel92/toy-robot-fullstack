@@ -1,9 +1,8 @@
 package app.toyrobot.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import app.toyrobot.model.Robot;
 import app.toyrobot.repository.RobotRepository;
@@ -54,8 +53,12 @@ public class RobotServiceImpl implements RobotService {
     }
 
     private Robot getRobot(long id) {
-        final Robot robot = robotRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, Robot.ROBOT_MISSING));
+        final Robot robot = robotRepository.findById(id).orElseThrow(() -> new EmptyResultDataAccessException(1));
         return robot;
+    }
+
+    public void setRobotRepository(RobotRepository robotRepository) {
+        this.robotRepository = robotRepository;
     }
 
 }
