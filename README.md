@@ -1,9 +1,6 @@
 
-# Toy Robot Simulation
+# Toy Robot Simulation [![Build Status](https://travis-ci.org/ankurgoel92/toy-robot.svg?branch=master)](https://travis-ci.org/ankurgoel92/toy-robot) [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://my-toy-robot.herokuapp.com/swagger-ui.html)
 
-[![Build Status](https://travis-ci.org/ankurgoel92/toy-robot.svg?branch=master)](https://travis-ci.org/ankurgoel92/toy-robot)
-
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://my-toy-robot.herokuapp.com/swagger-ui.html)
 
 ## Description
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 x 5 units.
